@@ -13,7 +13,7 @@ def get_logs(container: Container) -> str:
 
 
 def get_nginx_config(container: Container) -> str:
-    result = container.exec_run(f"/usr/sbin/nginx -T")
+    result = container.exec_run("/usr/sbin/nginx -T")
     return result.output.decode()
 
 
